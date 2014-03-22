@@ -1,2 +1,4 @@
-class Girl < ActiveRecord::Base
+class Girl
+  include Mongoid::Document
+
 end
