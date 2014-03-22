@@ -1,11 +1,24 @@
 production:
   sessions:
     default:
-      database: cat
+      database: cat-production
       hosts:
-        - localhost:27017
+        - 172.17.0.4:49162
+      username: cat
+      password: RjFGRk1hVStGWVF6QXYxYjJ4bThQd2xBanB4SGdVS2w3Tkt3M1RKS3gxST0K
       options:
   options:
+
+# production:
+#   sessions:
+#     default:
+#       database: <%= ENV['MONGODB_DATABASE'] %>
+#       hosts:
+#         - <%= ENV['MONGODB_HOST'] %>:<%= ENV['MONGODB_PORT'] %>
+#       username: <%= ENV['MONGODB_USERNAME'] %>
+#       password: <%= ENV['MONGODB_PASSWORD'] %>
+#       options:
+#   options:
 
 development:
   # Configure available database sessions. (required)
@@ -68,11 +81,9 @@ development:
 test:
   sessions:
     default:
-      database: <%= ENV['MONGODB_DATABASE'] %>
+      database: cat_test
       hosts:
-        - <%= ENV['MONGODB_HOST'] %>:<%= ENV['MONGODB_PORT'] %>
-      username: <%= ENV['MONGODB_USERNAME'] %>
-      password: <%= ENV['MONGODB_PASSWORD'] %>
+        - localhost:27017
       options:
         read: primary
         # In the test environment we lower the retries and retry interval to
