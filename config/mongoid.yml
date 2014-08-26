@@ -1,10 +1,10 @@
 production:
   sessions:
     default:
-      # uri: <%= ENV['MONGO_URL'] %>
-      database: cat-production
-      hosts:
-        - 172.17.0.4:49162
+      uri: <%= ENV['MONGO_URL'] %>
+      # database: cat-production
+      # hosts:
+      #   - 172.17.0.4:49162
       # username: cat
       # password: RjFGRk1hVStGWVF6QXYxYjJ4bThQd2xBanB4SGdVS2w3Tkt3M1RKS3gxST0K
       options:
